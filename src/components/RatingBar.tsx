@@ -1,5 +1,6 @@
 import React from "react";
 import type { RatingBarProps } from "./types";
+import star from "../assets/star.png"
 
 const RatingBar: React.FC<RatingBarProps> = ({ starCount, reviewCount, totalReviews }) => {
     const barWidth = totalReviews > 0 ? (reviewCount / totalReviews) * 100 : 0;
@@ -7,8 +8,9 @@ const RatingBar: React.FC<RatingBarProps> = ({ starCount, reviewCount, totalRevi
     return (
         <div style={{ display: 'flex', alignItems: 'center', margin: '5px 0' }}>
             {/* x-star label */}
-            <span style={{ fontWeight: 'bold', width: '20px', textAlign: 'right', marginRight: '10px' }}>
-                {starCount}*
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '1px', fontWeight: 'bold', width: '20px', textAlign: 'left', marginRight: '10px', paddingRight: '5px' }}>
+                {starCount}
+                <img src={star} height='15px' width='auto'/>
             </span>
 
             {/* The progress bar element */}

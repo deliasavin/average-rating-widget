@@ -11,7 +11,7 @@ function App() {
   };
 
   return (
-    <div style={{ padding: '30px' }}>
+    <div style={{ padding: '10px' }}>
       <ReviewWidget data={sampleRatingData} />
     </div>
   );

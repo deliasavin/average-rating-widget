@@ -11,9 +11,9 @@ const ReviewWidget: React.FC<{ data: RatingData }> = ({ data }) => {
   return (
     <div style={{ 
       border: '1px solid #ccc', 
-      padding: '20px', 
+      padding: '25px', 
       borderRadius: '8px', 
-      maxWidth: '400px',
+      width: '85vw',
       fontFamily: 'Arial, sans-serif'
     }}>
 
@@ -27,7 +27,6 @@ const ReviewWidget: React.FC<{ data: RatingData }> = ({ data }) => {
       
       {/* --- Average Rating Display --- */}
       <div style={{ textAlign: 'center', marginBottom: '15px' }}>
-        <h2 style={{ margin: 0 }}>Average Rating</h2>
         <p style={{ fontSize: '1em', fontWeight: 'bold', color: '#666' }}>
           {data.averageRating.toFixed(1)} <span style={{ fontSize: '1em', color: '#666' }}>OUT OF 5</span>
         </p>
