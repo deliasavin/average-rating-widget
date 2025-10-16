@@ -6,7 +6,7 @@ const StarsBar: React.FC<StarsBarProps> = ({ averageRating }) => {
     const barWidth = averageRating * 20;
 
     const clipStyle: React.CSSProperties = {
-        // Clip the left side to (clampedProgress)%, leaving the right side visible.
+        // Clip the left side to (barWidth)%, leaving the right side visible.
         clipPath: `inset(0% ${100 - barWidth}% 0% 0%)`,
         transition: 'clip-path 0.5s ease-in-out',
       };
